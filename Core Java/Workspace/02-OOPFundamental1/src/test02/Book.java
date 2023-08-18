@@ -1,9 +1,9 @@
 package test02;
 
 public class Book {
-	private long bookIsbn;
-	private String bookName;
-	private double bookPrice;
+	public long bookIsbn;
+	public String bookName;
+	public double bookPrice;
 	
 	public void display() {
 		System.out.println("ISBN = "+bookIsbn);
