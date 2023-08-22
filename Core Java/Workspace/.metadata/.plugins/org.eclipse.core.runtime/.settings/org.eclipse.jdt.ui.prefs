@@ -1,4 +1,4 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="test01.Book"><rhs name\="test01.Book"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="test01.Book"><rhs name\="test01.Book"/></lhs><lhs name\="java.util.Iterator"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="com.hsbc.Student"><rhs name\="com.hsbc.Student"/></lhs><lhs name\="test06.Shape"><rhs name\="test06.Shape"/></lhs><lhs name\="test10.Account"><rhs name\="test10.Account"/></lhs><lhs name\="test09.Customer"><rhs name\="test09.Customer"/></lhs><lhs name\="test09.Account"><rhs name\="test09.Account"/></lhs></history>
 content_assist_number_of_computers=17
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
