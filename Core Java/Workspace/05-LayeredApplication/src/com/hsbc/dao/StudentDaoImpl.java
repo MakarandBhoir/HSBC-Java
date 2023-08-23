@@ -36,4 +36,15 @@ public class StudentDaoImpl implements StudentDao {
 		return result;
 	}
 
+	@Override
+	public boolean deleteStudent(int studentId) {
+		return false;
+	}
+
+	@Override
+	public Student updateStudent(int studentId, Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
