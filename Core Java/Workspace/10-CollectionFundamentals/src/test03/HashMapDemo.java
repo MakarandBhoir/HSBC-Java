@@ -13,6 +13,7 @@ public class HashMapDemo {
 		map.put("Test", 98076542310L);
 		
 		Set<Entry<String, Long>> entries =  map.entrySet();
+		
 		for(Entry<String, Long> entry : entries) {
 			System.out.println(entry.getKey()+" = "+entry.getValue());
 		}
