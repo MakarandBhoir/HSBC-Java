@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 import com.hsbc.dao.StudentDao;
 import com.hsbc.exceptions.NoSuchStudentException;
+import com.hsbc.exceptions.StudentAlreadyExistsException;
+import com.hsbc.exceptions.TechnicalException;
 import com.hsbc.factory.StudentDaoFactory;
 import com.hsbc.model.Student;
 import com.hsbc.service.StudentServiceImpl;
@@ -24,13 +26,21 @@ public class StudentApplication {
 		
 		//StudentDao dao = new StudentDaoImpl();
 		service.setDao(dao); // setup dependency
+		Student student = new Student(35, "Test", 60);
 		
 		try {
-			Student result = service.findStudent(24);
+			service.addStudent(student);
+			Student result = service.findStudent(34);
 			System.out.println(result);
 		} 
 		catch (NoSuchStudentException e) {
-			System.out.println("Student not found!");
+			System.out.println(e.getMessage());
+		}
+		catch(TechnicalException e) {
+			System.out.println("There is some technical problem. please connect admin.");
+		}
+		catch(StudentAlreadyExistsException ex) {
+			System.out.println(ex.getMessage());
 		}
 	}
 }
