@@ -1,0 +1,12 @@
+[
+	{
+		"studentId": "1",
+		"studentName": "Aditya D",
+		"studentScore": "90"
+	},
+	{
+		"studentId": "2",
+		"studentName": "Aditya S",
+		"studentScore": "86"
+	}
+]
