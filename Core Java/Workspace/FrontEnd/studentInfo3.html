@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Student Info</title>
+	<script type="text/javascript">
+		function getStudentData(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "http://localhost:8080/05_SimpleBackendApp/DataServlet2", true);
+			xhttp.send();
+			
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var studentList = JSON.parse(this.responseText);
+					var html = "<table>";
+						html += "<tr><th>Student Id</th> <th>Student Name</th> <th>Student Score</th></tr>";
+						
+						for(var i=0; i<studentList.length; i++){
+							html += "<tr>";
+							html += "<td>"+studentList[i].studentId+"</td>";
+							html += "<td>"+studentList[i].studentName+"</td>";
+							html += "<td>"+studentList[i].studentScore+"</td>";
+							html += "</tr>";
+						}
+						html += "</table>";
+						document.getElementById("result").innerHTML = html;
+				}
+			};
+		}
+	</script>
+</head>
+<body onload="getStudentData()">
+	
+	<div id="result">
+		
+	</div>
+	
+</body>
+</html>
