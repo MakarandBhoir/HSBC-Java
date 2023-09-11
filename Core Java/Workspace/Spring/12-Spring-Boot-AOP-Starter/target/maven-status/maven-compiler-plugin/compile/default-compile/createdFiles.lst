@@ -1,0 +1,3 @@
+com\hsbc\service\StudentService.class
+com\hsbc\crosscutting\StudentLogging.class
+com\hsbc\MainApp.class
