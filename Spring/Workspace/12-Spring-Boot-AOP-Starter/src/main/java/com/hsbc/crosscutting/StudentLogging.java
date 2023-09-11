@@ -18,28 +18,28 @@ public class StudentLogging {
 		System.out.println("logging message - before advice");
 	}
 	
-	@After("execution(* com.hsbc.service.StudentService.studentService(..))")
-	public void logMessage2() {
-		System.out.println("logging message - after advice");
-	}
-	
-	@Around("execution(* com.hsbc.service.StudentService.studentService(..))")
-	public String logMessage3(ProceedingJoinPoint jp) throws Throwable {
-		System.out.println("logging message - around advice");
-		String str = (String) jp.proceed();
-		System.out.println("logging message - around advice");
-		return str;
-	}
-	
-	@AfterReturning("execution(* com.hsbc.service.StudentService.studentService(..))")
-	public void logMessage4() {
-		System.out.println("logging message - afterReturning advice");
-	}
-	
-	@AfterThrowing("execution(* com.hsbc.service.StudentService.studentService(..))")
-	public void logMessage5() {
-		System.out.println("logging message - - afterThrowing advice");
-	}
+//	@After("execution(* com.hsbc.service.StudentService.studentService(..))")
+//	public void logMessage2() {
+//		System.out.println("logging message - after advice");
+//	}
+//	
+//	@Around("execution(* com.hsbc.service.StudentService.studentService(..))")
+//	public String logMessage3(ProceedingJoinPoint jp) throws Throwable {
+//		System.out.println("logging message - around advice");
+//		String str = (String) jp.proceed();
+//		System.out.println("logging message - around advice");
+//		return str;
+//	}
+//	
+//	@AfterReturning("execution(* com.hsbc.service.StudentService.studentService(..))")
+//	public void logMessage4() {
+//		System.out.println("logging message - afterReturning advice");
+//	}
+//	
+//	@AfterThrowing("execution(* com.hsbc.service.StudentService.studentService(..))")
+//	public void logMessage5() {
+//		System.out.println("logging message - - afterThrowing advice");
+//	}
 	
 
 }
