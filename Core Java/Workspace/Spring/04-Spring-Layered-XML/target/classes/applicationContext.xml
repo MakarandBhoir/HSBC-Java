@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="student" class="com.hsbc.model.Student" scope="prototype">
+		<property name="studentId" value="1"></property>
+		<property name="studentName" value="Test"></property>
+		<property name="studentScore" value="40"></property>
+	</bean>
+	
+	<bean id="service" class="com.hsbc.service.StudentServiceImpl" 
+						scope="singleton" autowire="constructor">
+		<!-- <property name="dao" ref="dao"></property> -->
+	</bean>
+	
+	<bean id="dao2" class="com.hsbc.dao.StudentDaoImpl2" scope="singleton">
+	
+	</bean>
+</beans>

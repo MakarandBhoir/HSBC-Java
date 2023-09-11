@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="student" class="com.hsbc.model.Student" scope="prototype">
+		<constructor-arg name="studentId" value="1"></constructor-arg>
+		<constructor-arg name="studentName" value="Test"></constructor-arg>
+		<constructor-arg name="studentScore" value="50"></constructor-arg>
+		
+		<property name="dept" ref="dept"></property>
+	</bean>
+	<bean id="dept" class="com.hsbc.model.Department" scope="prototype">
+		<constructor-arg index="0" value="1"></constructor-arg>
+		<constructor-arg index="1" value="Test"></constructor-arg>
+	</bean>
+</beans>
